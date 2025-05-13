@@ -182,6 +182,9 @@ aside>ul{
     list-style-position: inside;
     columns: 2;
 }
+li{
+    font-size: 0.9em;
+}
 
 
 
