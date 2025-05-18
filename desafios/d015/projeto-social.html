@@ -14,10 +14,25 @@
             background-attachment: fixed;
         }
 
+        #iphone-container{
+            position: relative;
+            width: 300px;
+            margin: auto;
+        }
+
         #frame-iphone{
             display: block;
-            margin: auto;
             margin-top: 150px;
+            
+        }
+
+        #tela{
+            position: absolute;
+            top: 80px;  
+            left: 20px;   
+            width: 270px; 
+            height: 480px; 
+           
         }
 
         #logos{
@@ -37,14 +52,18 @@
         .logo:hover {
             transform: scale(1.2);
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
+        }
 
 
 
     </style>
 </head>
 <body>
-    <img id="frame-iphone" src="imagens/frame-iphone.png" alt="iphone">
+    <div id="iphone-container">
+        <img id="frame-iphone" src="imagens/frame-iphone.png" alt="iphone">
+        <iframe id="tela" src="pag-home.html" frameborder="0"></iframe>
+    </div>
+    
 
     <div id="logos">
         <a href="#"><img class="logo" src="imagens/logo-home.jpg" alt="home"></a>
