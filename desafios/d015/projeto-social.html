@@ -13,9 +13,45 @@
             background-size: cover;
             background-attachment: fixed;
         }
+
+        #frame-iphone{
+            display: block;
+            margin: auto;
+            margin-top: 150px;
+        }
+
+        #logos{
+            position: fixed;
+            top: 0px;
+            right: 10px;
+            padding: 5px;
+        }
+
+        .logo{
+            display: block;
+            border-radius: 50%;
+            width: 50px;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .logo:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+
+
     </style>
 </head>
 <body>
+    <img id="frame-iphone" src="imagens/frame-iphone.png" alt="iphone">
+
+    <div id="logos">
+        <a href="#"><img class="logo" src="imagens/logo-home.jpg" alt="home"></a>
+        <a href="#"><img class="logo" src="imagens/logo-github.jpg" alt="github"></a>
+        <a href="#"><img class="logo" src="imagens/logo-instagram.jpg" alt="instagram"></a>
+        <a href="#"><img class="logo" src="imagens/logo-linkedin.jpg" alt=""></a>
+    </div>
     
 </body>
 </html>
