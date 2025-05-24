@@ -12,8 +12,8 @@ html{
 }
 
 :root{
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
+    --primaria: #46c5e5;
+    --secundaria: #3aedc6;
     --escuro: #0f172a;
     --maisescuro: #0a0f1c;
     --claro: #e2e8f0;
@@ -65,7 +65,7 @@ body{
     width: 100%; 
 }
 
-.foto-perfil{
+.foto-perfil{  
     width: 350px;
     height: 350px;
 
@@ -98,6 +98,15 @@ h1{
     color: var(--claro);
 }
 
+
+.curriculo{
+    background-color: var(--primaria);
+    width: 150px;
+    border-radius: 30px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;  
+}
 .sobre{
     padding: 6rem 2rem;
 
@@ -116,7 +125,7 @@ h1{
     max-width: 800px;
     margin: auto;
     border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(17, 206, 212, 0.103);
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
 }
@@ -142,7 +151,7 @@ h1{
 }
 
 .projetos-card{
-    background-color: rgba(255, 255, 255, 0.137);
+    background-color: rgba(17, 206, 212, 0.103);
     border-radius: 16px;
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
@@ -204,7 +213,7 @@ h1{
 .form{
     max-width: 600px;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.137);
+    background-color: rgba(17, 206, 212, 0.103);
     backdrop-filter: blur(5px);
     padding: 2rem;
     border: 1px solid var(--vidro);
@@ -234,7 +243,7 @@ h1{
 }
 
 .form-botao{
-    color:var(--claro) ;
+    color:var(--escuro) ;
     background-image: linear-gradient(45deg, var(--primaria), var(--secundaria));
     padding: 1rem 2rem;
     border: none;
