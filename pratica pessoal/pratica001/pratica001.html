@@ -1,101 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         *{
-            margin: 0px;
-            padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        html, body{
-            margin: 0px;
-            height: 100vh;
-        }
+html{
+    scroll-behavior: smooth;
+}
 
-        :root{
-            --cor1:#00E8EA;
-            --cor2:#20BDC0;
-            --cor3:#329496;
-            --cor4:#366A6B;
-            --cor5:#2B4041;
-        }
+:root{
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisescuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
 
-        header {
-            color: white;
-            background-color: var(--cor3);
-            position: relative;
-            padding: 10px 20px;
-            height: 30px;
-        }
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
 
-        header p {
-            font-family: cursive;
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            font-weight: bold;
-        }
+.navbar{
+    position: fixed;
+    top: 0;
+    background-color: rgba(15,23,42,0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
 
-        header nav {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
 
-        header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: white;
-        }
-         main{
-            position: relative;
-            height: 94vh;
-         }
+.menu-link{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: bold;
+    position: relative;
+    padding: 0.5rem;
 
-        main .imagem1{
-            position: absolute;
-            top: 50px;
-            left: 50%;
+}
 
-            transform: translate(-50%, 0);
+.menu-link:after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background-image: linear-gradient(to right, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
 
+.menu-link:hover::after{
+    width: 100%; 
+}
 
-            border-radius: 50%;
-            width: 250px;
-        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a class="menu-link" href="#inicio">Ínicio</a></li>
+            <li><a class="menu-link" href="#sobre">Sobre</a></li>
+            <li><a class="menu-link" href="#projetos">Projetos</a></li>
+            <li><a class="menu-link" href="#contato">Contato</a></li>
+        </ul>
+    </nav>   
 
-    <header>
-        <p>SimpliCiano</p>
-
-        <nav>
-            <a href="#">Sobre mim</a>
-            <a href="#">Certificados</a>
-            <a href="#">Projetos</a>
-        </nav>
-    </header>
-
-
-    
     <main>
-        <img class="imagem1" src="imagens/foto-gabriel.png" alt="imagem gabriel">
+        <section id="inicio" class="home">
+            <div>
+                <img class="foto-perfil" src="imagens/foto-gabriel.png" alt="Foto de Gabriel">
+                <h1>Gabriel dos Santos</h1>
+                <p>Estudante de Front End</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">Sobre mim</h2>
+            <div class="sobre-caixa">
+                <p class="sobre-texto">Olá, sou um estudante de desenvolvimento front end apaixonado por aprendizado e por desenvolver projetos que me desafiem e me ajudem a evoluir cada vez mais!</p>
+            </div>
+        </section>
+
+        <section id="projetos" class="projetos">
+            <h2 class="projetos-titulo">Meus Projetos</h2>
+            <div class="projetos-caixa">
+
+                <div class="projetos-card">
+                    <img class="projetos-imagem" src="imagens/projeto1.jpg" alt="Projeto 1">
+                    <h3 class="projetos-info">Site Android</h3>
+                    <p class="projetos-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum sint dicta rerum mollitia est magni atque recusandae provident eum at dolorum dolores neque quas soluta perspiciatis voluptates, enim itaque.</p>
+                </div>
+
+                <div class="projetos-card">
+                    <img class="projetos-imagem" src="imagens/projeto2.jpg" alt="Projeto 2">
+                    <h3 class="projetos-info">Site Cordel Moderno</h3>
+                    <p class="projetos-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum sint dicta rerum mollitia est magni atque recusandae provident eum at dolorum dolores neque quas soluta perspiciatis voluptates, enim itaque.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contatos" class="contatos">
+            <h2 class="contatos-titulo">Contatos</h2>
+            <form class="form" id="form">
+                 <div class="nome-form">
+                    <input class="campo-form" placeholder="Nome">
+                 </div>
+
+                 <div class="grupo-form">
+                    <textarea class="text-form" placeholder="Digite sua mensagem"></textarea>
+                </div>
+            </form>
+
+        </section>
+    
 
     </main>
-
-
-
-    <footer>
-
-    </footer>
-    
 </body>
 </html>
