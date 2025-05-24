@@ -93,13 +93,15 @@ h1{
     margin: 20px;
 }
 
-.home p{
+.dev{
     font-size: 1.5rem;
     color: var(--claro);
 }
 
 
 .curriculo{
+    font-weight: bold;
+    font-size: 1.5rem;
     color: var(--escuro);
     background-color: var(--primaria);
     width: 150px;
@@ -108,6 +110,11 @@ h1{
     margin: auto;
     margin-top: 20px;  
 }
+
+.cvlink{
+    text-decoration: none;
+}
+
 .sobre{
     padding: 6rem 2rem;
 
@@ -118,7 +125,6 @@ h1{
     color: var(--claro);
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .sobre-caixa{
@@ -132,7 +138,7 @@ h1{
 }
 
 .sobre-texto{
-    text-align: center;
+    text-align: justify;
     font-size: 1.2rem;
 }
 
