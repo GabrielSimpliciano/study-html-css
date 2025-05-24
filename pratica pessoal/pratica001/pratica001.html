@@ -5,73 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-:root{
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;
-    --maisescuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
-}
-
-body{
-    background-color: var(--escuro);
-    color: var(--claro);
-}
-
-.navbar{
-    position: fixed;
-    top: 0;
-    background-color: rgba(15,23,42,0.8);
-    width: 100%;
-    z-index: 100;
-    padding: 1.5rem;
-}
-
-.menu{
-    display: flex;
-    list-style: none;
-    gap: 3rem;
-    justify-content: center;
-}
-
-.menu-link{
-    text-decoration: none;
-    color: var(--claro);
-    font-weight: bold;
-    position: relative;
-    padding: 0.5rem;
-
-}
-
-.menu-link:after{
-    content: '';
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    background-image: linear-gradient(to right, var(--primaria), var(--secundaria));
-    transition: width 0.5s ease;
-}
-
-.menu-link:hover::after{
-    width: 100%; 
-}
-
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -88,7 +21,7 @@ body{
             <div>
                 <img class="foto-perfil" src="imagens/foto-gabriel.png" alt="Foto de Gabriel">
                 <h1>Gabriel dos Santos</h1>
-                <p>Estudante de Front End</p>
+                <p>Desenvolvedor em formação</p>
             </div>
         </section>
 
