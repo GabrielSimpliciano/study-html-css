@@ -60,19 +60,38 @@
 
         <section id="contatos" class="contatos">
             <h2 class="contatos-titulo">Entre em Contatos</h2>
-            <form class="form" id="form">
+            <form class="form" id="form" onsubmit="enviarWhats(event)">
                  <div class="grupo-form">
-                    <input class="campo-form" placeholder="Nome">
+                    <input class="campo-form" id="nome" placeholder="Nome">
                  </div>
 
                  <div class="grupo-form">
-                    <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+                    <textarea class="campo-form" id="mensagem" placeholder="Digite sua mensagem" rows="6"></textarea>
                 </div>
 
                 <input class="form-botao" type="submit" value="Enviar Whatsapp">
             </form>
 
         </section>
+
+        <script>
+
+            function enviarWhats(event){
+                event.preventDefault()
+
+                const nome = document.getElementById('nome').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const telefone = '5571991989979'
+
+                const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+                const msgFormatada = encodeURIComponent (texto)
+
+                const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+
+                window.open(url, '_blank')
+
+            }
+        </script>
     
 
     </main>
